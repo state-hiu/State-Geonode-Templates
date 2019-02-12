@@ -7009,7 +7009,7 @@ article.tab-pane {
   text-align: center;
 }
 .home .big-search a {
-  color: #3b679c;
+  color: white;
 }
 .home .big-search .search {
   left: 0;
@@ -7039,7 +7039,7 @@ article.tab-pane {
 .home .big-search .btn-default {
   background: transparent;
   border: none;
-  color: #0A2E52;
+  color: white;
 }
 .home .big-search .btn-default:hover {
   text-decoration: underline;
