@@ -12,3 +12,24 @@ This repo will also contain a script that will automatically load the template a
 directories to load:
 -static
 -templates
+
+**extra note: When loading the templates I did 2 modifications to the settings file, which may have resulted in the proper templates and static files being loaded. They were adding this:
+
+```
+# URL that handles the static files like app media.
+# Example: "http://media.lawrence.com"
+STATIC_URL = os.getenv('STATIC_URL',"/static/")
+```
+
+as well as adding the 'debug toolbar' app to this code block:
+
+```
+if PROJECT_NAME not in INSTALLED_APPS:
+    INSTALLED_APPS += (PROJECT_NAME,'debug_toolbar')
+```
+
+I also installed the debug toolbar:
+
+```
+pip install django-debug-toolbar
+```
