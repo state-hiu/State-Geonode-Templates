@@ -41,7 +41,7 @@
               <a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Maps" %}</a>
               {% endif %}
             </li>
-{% endcomment %}
+
             <li>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "About" %}<i class="fa fa-angle-down fa-lg"></i></a>
               <ul class="dropdown-menu">
@@ -59,6 +59,7 @@
                 {% endif %}
               </ul>
             </li>
+{% endcomment %}
 
       {% block extra_tab %}
             {% endblock %}
@@ -71,7 +72,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
+        <!--<div class="col-md-2">
           <ul class="list-unstyled">
             <li>{% trans "Data" %}</li>
             <li><a href="{% url "layer_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Layers" %}</a></li>
@@ -89,17 +90,17 @@
                 <li><a href="{% url "register_service" %}">{% trans "Add Remote Service" %}</a></li>
             {% endif %}
           </ul>
-        </div>
-        <div class="col-md-2">
-          <!--<ul class="list-unstyled">
+        </div>-->
+        <!--<div class="col-md-2">
+          <ul class="list-unstyled">
             <li>{% trans "Maps" %}</li>
             <li><a href="{% url "maps_browse" %}?limit={{ CLIENT_RESULTS_LIMIT }}">{% trans "Explore Maps" %}</a></li>
             {% if user.is_authenticated %}
             <li> <a href="{% url "new_map" %}">{% trans "Create Map" %}</a></li>
             {% endif %}
-          </ul>-->
-        </div> 
-		<div class="col-md-2">
+          </ul>
+        </div>--> 
+	<!--<div class="col-md-2">
           <ul class="list-unstyled">
             <li>{% trans "About" %}</li>
             <li><a href="{% url "profile_browse" %}">{% trans "People" %}</a></li>
@@ -113,8 +114,12 @@
             <li><a href="{% url "group_create" %}">{% trans "Create Group" %}</a></li>
             {% endif %}
           </ul>
+        </div>-->
+        <div class="col-md-8">
+            The Office of the Geographer and Global Issues, manages this site as a portal for information from the U.S. State Department.
+External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein.
         </div>
- <div class="col-md-6 text-right">
+ <div class="col-md-4 text-right">
           {% block contactus %}
           {% if custom_theme.contactus %}
           <ul class="list-unstyled">
